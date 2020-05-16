@@ -1,23 +1,24 @@
-self.addEventListener('push', function(event) {
-    var options= {
+self.addEventListener('push', function(e) {
+   
+     var options= {
   body:'this notification was generated from a push !',
-  icon :'image/example.png',
+  icon :" https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/1200px-Archlinux-icon-crystal-64.svg.png",
   variable:[100,50,100],
   data:{
-      dataOfARRIVAL:Data.now(),
+      dateOfArrival:Date.now(),
       primaryKey:'2'
   },
   actions :[
   {
     action:'explore',
     title :'explore this new world',
-    icon:'image/example.png'
+    icon:"https://icon2.cleanpng.com/20180330/sxw/kisspng-check-mark-computer-icons-clip-art-green-tick-5abe6e2d88aca0.5352612615224294855598.jpg"
 },
     {
-        action: 'close', title: 'colse', icon:'image/xmark.png'
+        action: 'close', title: 'colse', icon:" https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/1200px-Archlinux-icon-crystal-64.svg.png"
     }
   ]
 };
  
-    event.waitUntil(self.registration.showNotification('hello word!',options));
+    e.waitUntil(self.registration.showNotification('hello word!',options));
   });
