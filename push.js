@@ -1,5 +1,7 @@
 var push = require ('web-push');
+const express = require ('express');
 
+//routes
 let vapidKeys = {
     publicKey: 'BP8aGUcjAbtM6EMhiSureu25W7ECUvddj8k91i5C8RXQmyqdpOM4pInKttnfAomSIjRctoC7y5MHVNGtnBu_iag',
     privateKey: 'FBSxUzrv425EDZXZjtzstHKukapV0wyCmGk8DBXq7jI'
@@ -18,3 +20,4 @@ let vapidKeys = {
 
    /* const port =5000;
     app.listen(port,()=>console.log('server started on port ${port}'));  */
+  
